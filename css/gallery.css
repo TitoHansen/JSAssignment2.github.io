@@ -1,0 +1,77 @@
+/* Reset default styles and set base styles */
+body {
+    font-family: Arial, sans-serif; /* Set font family for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f0f0f0; /* Set background color */
+}
+
+/* Style the heading */
+h1 {
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Add margin space on top */
+    color: #333; /* Set text color */
+}
+
+/* Style the gallery section */
+#gallery {
+    width: 80%; /* Set gallery width */
+    margin: 0 auto; /* Center align the gallery horizontally */
+    padding: 20px; /* Add padding inside the gallery */
+    background-color: #fff; /* Set background color */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+/* Style the figure containing the featured image */
+figure {
+    text-align: center; /* Center align content */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style the featured image */
+figure img {
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    object-fit: cover; /* Scale image to cover its container */
+}
+
+/* Style the caption for the featured image */
+figcaption {
+    margin-top: 10px; /* Add space on top */
+    font-size: 16px; /* Set font size */
+    color: #666; /* Set text color */
+}
+
+/* Style the container for thumbnails */
+#thumbnails {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align items horizontally */
+    gap: 10px; /* Add space between items */
+    margin-top: 20px; /* Add margin space on top */
+}
+
+/* Style individual thumbnail images */
+#thumbnails img {
+    width: calc((100% - 40px) / 5); /* Calculate width to fit 5 images with gaps */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    filter: grayscale(100%); /* Convert image to grayscale */
+    transition: filter 0.3s, transform 0.3s; /* Smooth transition for grayscale and scale */
+    object-fit: cover; /* Scale image to cover its container */
+}
+
+/* Hover effect for thumbnails */
+#thumbnails img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Active state for thumbnails */
+#thumbnails img.active {
+    filter: none; /* Remove grayscale filter */
+    border-color: #333; /* Change border color */
+}
